@@ -153,7 +153,12 @@ Use this __only__ if you're sure of the operation you're confirming.
 4. Use __az interactive__ if you're new to Azure CLI
 
 __az interactive__ is a great way to learn Azure CLI. This will install another extension on your workstation,
-and will help you writing commands in a nice and clean way :
-
+and will help you writing commands in a nice and clean way.
+This adds auto-completion, command descriptions and many more.
 
 ![interactive](/azureclitips/images/8.png)
+
+You can can learn more about AZ Interactive [here](https://docs.microsoft.com/en-us/cli/azure/interactive-azure-cli).
+
+That's it for today's article.
+Please let me know what you think at : nadebu@outlook.com
