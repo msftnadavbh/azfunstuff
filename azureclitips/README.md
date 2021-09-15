@@ -88,6 +88,11 @@ for example, __az group list -o table__ will always return the output in a table
 
 Choose the one that you like the most, and let's move on.
 
+Next, Azure CLI will ask you if you want to log to file. I recommend __enabling__ this for debugging purposes.
+This setting will log all the exit code of your commands to ___%HOME%/.azure/commands__ folder on Linux and __%USERPROFILE/.azure/commands__ on Windows :
+
+
+![log to file](/azureclitips/images/7.png)
 
 
 
