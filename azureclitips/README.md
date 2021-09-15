@@ -8,7 +8,7 @@ e.g listing VMs, getting the running state of a particular resource, etc.
 
 In this article, I'll give you some great tips on enhancing your work with Azure CLI,
 
-Leveraging it's power over basically any other way of interacting with Azure.
+Leveraging its power over basically any other way of interacting with Azure.
 
 If you haven't already installed Azure CLI, [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) it is.
 
@@ -47,7 +47,7 @@ We can set other default configuration options such as : Resource Groups, App Se
 
 __Important Note__ : If you don't like the __az configure__ command, you can write the configuration yourself by editing the Azure CLI config file which exists at : $HOME/.azure/config on Linux and MacOS and %USERPROFILE%/azure if you're using Windows.
 
-__core__ gives you the ability to change Azure CLI's behavior. A good example will be making Azure CLI default to yes on every prompt by adding __disable_confirm_prompt=Yes__ on the Azure CLI configuration file, however, this is not a recommended approach so __use this for development purposes only__.
+__core__ gives you the ability to change Azure CLI's behavior. A good example will be making Azure CLI default to yes on every prompt by adding __disable_confirm_prompt=Yes__ on the Azure CLI configuration file, however, this is not a recommended approach so, __use this for development purposes only__.
 
 
 
@@ -59,7 +59,7 @@ Azure CLI will now prompt you for a default output :
 
 ![default output](/azureclitips/images/3.png)
 
-As you probably know, by default if not set differnetly Azure CLI will always return the output as JSON.
+As you probably know, by default if not set differently Azure CLI will always return the output as JSON.
 Let's look at the following options - __json,jsonc,tsv,yaml,yamlc__ and __table__.
 
 __JSON__ is the default output. Nothing fancy here.
@@ -75,6 +75,18 @@ __YAMLC__ is the same as JSONC, but for yaml.
 Using the same command again :
 
 ![YAMLC](/azureclitips/images/5.png)
+
+
+__TSV__ will make the output return in a tsv format. I don't recommend using this option unless it's mandatory for you.
+
+__table__ is the one to use if you don't need elaborated information. Using the same command again :
+
+![table](/azureclitips/images/6.png)
+
+__Important Note__ : You can always __bypass__ the default configuration for output using __-o__ trigger. 
+for example, __az group list -o table__ will always return the output in a table format, regarding of what is set by default.
+
+Choose the one that you like the most, and let's move on.
 
 
 
