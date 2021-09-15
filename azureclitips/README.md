@@ -118,7 +118,7 @@ Add __--debug__ to see everything behind the scenes and then if something fails 
 
 ` az aro create -n name -g resourcegroup --debug`
 
-
+--------------
 
 * Use __--no-wait__ for long operations
 
@@ -148,6 +148,7 @@ Back the __az aks delete__ command, adding __--yes__ will remove the prompt aski
 
 Use this __only__ if you're sure of the operation you're confirming.
 
+--------------
 
 * Use __az interactive__ if you're new to Azure CLI
 
@@ -159,5 +160,7 @@ This adds auto-completion, command descriptions and many more.
 
 You can can learn more about AZ Interactive [here](https://docs.microsoft.com/en-us/cli/azure/interactive-azure-cli).
 
-That's it for today's article.
+--------------
+
+That's it for today's article, thank you for reading!
 Please let me know what you think at : nadebu@outlook.com
