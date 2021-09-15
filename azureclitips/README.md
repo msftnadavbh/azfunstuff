@@ -89,10 +89,51 @@ for example, __az group list -o table__ will always return the output in a table
 Choose the one that you like the most, and let's move on.
 
 Next, Azure CLI will ask you if you want to log to file. I recommend __enabling__ this for debugging purposes.
-This setting will log all the exit code of your commands to ___%HOME%/.azure/commands__ folder on Linux and __%USERPROFILE/.azure/commands__ on Windows :
-
+This setting will log  the exit code of your commands to __%HOME%/.azure/commands__ folder on Linux and __%USERPROFILE/.azure/commands__ on Windows :
 
 ![log to file](/azureclitips/images/7.png)
 
+__Enabling data collection__ is up to you - nothing to elaborate here.
 
+Do not change the default TTL for __Azure CLI cache__. Here the default approach is great for all scenarios, unless you have a specific requirement.
+
+Great, now Azure CLI is tailored to your needs and you can start enjoying it.
+
+
+## General Tips
+
+1. Use --debug trigger
+
+If you're running a complex command and you want detailed output, __--debug__ is your friend. 
+
+Use this trigger whenever you want to see how ARM handles your request.
+Let's say we're running a complex creation of Azure Red Hat OpenShift.
+The basic command is -
+
+` az aro create -n name -g resourcegroup `
+
+This command will not show a lot of information back to the user on a failure.
+
+Add __--debug__ to see everything behind the scenes and then if something fails troubleshooting will be immensly easier :
+
+` az aro create -n name -g resourcegroup --debug`
+
+
+2. Use __--no-wait__ for long operations
+
+Leverage the __--no-wait__ trigger if your command takes time to complete and you need to run other commands meanwhile.
+For example, let's say we're deleting an Azure Kubernetes Service (AKS) cluster :
+
+`az aks delete -n clustername -g resourcegroup`
+
+This command will prompt us to make sure that we wish to accomplish this operation and then will make us wait for it complete.
+
+Add __--no-wait__ and reclaim your terminal while the command continues to run in the background :
+
+`az aks delete -n clustername -g resourcegroup --no-wait`
+
+__Important Note__ : --no-wait trigger will not return any output back, so you need make sure the command did finish in another way.
+
+
+3. Use __--yes__ for operations
 
