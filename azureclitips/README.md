@@ -47,6 +47,10 @@ We can set other default configuration options such as : Resource Groups, App Se
 
 __Important Note__ : If you don't like the __az configure__ command, you can write the configuration yourself by editing the Azure CLI config file which exists at : $HOME/.azure/config on Linux and MacOS and %USERPROFILE%/azure if you're using Windows.
 
+__core__ gives you the ability to change Azure CLI's behavior. A good example will be making Azure CLI default to yes on every prompt by adding __disable_confirm_prompt=Yes__ on the Azure CLI configuration file, however, this is not a recommended approach so __use this for development purposes only__.
+
+
+
 ## Styling for the fun of it
 
 Azure CLI includes a lot of styling options for having a clean and understandable output.
