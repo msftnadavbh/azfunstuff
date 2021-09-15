@@ -102,8 +102,7 @@ Great, now Azure CLI is tailored to your needs and you can start enjoying it.
 
 ## General Tips
 
-
-1. Use __--debug__ trigger
+* Use __--debug__ trigger
 
 If you're running a complex command and you want detailed output, __--debug__ is your friend. 
 
@@ -121,7 +120,7 @@ Add __--debug__ to see everything behind the scenes and then if something fails 
 
 
 
-2. Use __--no-wait__ for long operations
+* Use __--no-wait__ for long operations
 
 Leverage the __--no-wait__ trigger if your command takes time to complete and you need to run other commands meanwhile.
 For example, let's say we're deleting an Azure Kubernetes Service (AKS) cluster :
@@ -136,10 +135,10 @@ Add __--no-wait__ and reclaim your terminal while the command continues to run i
 
 __Important Note__ : --no-wait trigger will not return any output back, so you need make sure the command did finish in another way.
 
+--------------
 
 
-
-3. Use __--yes__ for operations that need user prompt
+* Use __--yes__ for operations that need user prompt
 
 If you're absolutely sure about an operation that requires user prompt, use __--yes__ to bypass Azure CLI's prompt.
 
@@ -150,7 +149,7 @@ Back the __az aks delete__ command, adding __--yes__ will remove the prompt aski
 Use this __only__ if you're sure of the operation you're confirming.
 
 
-4. Use __az interactive__ if you're new to Azure CLI
+* Use __az interactive__ if you're new to Azure CLI
 
 __az interactive__ is a great way to learn Azure CLI. This will install another extension on your workstation,
 and will help you writing commands in a nice and clean way.
